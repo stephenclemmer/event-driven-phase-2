@@ -1,9 +1,9 @@
-'use strict';
+// 'use strict';
 
 let eventPool = require('../src/eventPool');
-const Chance = require('chance');
+// const Chance = require('chance');
 
-const chance = new Chance();
+// const chance = new Chance();
 
 eventPool.on('DELIVERY', confirmDelivery);
 
@@ -16,13 +16,13 @@ function confirmDelivery(payload){
 
 }
 
-setInterval(() => {
-  const order = {
-    store: chance.company(),
-    orderId: chance.guid({ version: 3 }),
-    name: chance.name(),
-    address: chance.address(),
-  };
-  console.log('----new order begins----');
-  eventPool.emit('PICKUP', {order});
-}, 2500);
+// setInterval(() => {
+//   const order = {
+//     store: chance.company(),
+//     orderId: chance.guid({ version: 3 }),
+//     name: chance.name(),
+//     address: chance.address(),
+//   };
+//   console.log('----new order begins----');
+//   eventPool.emit('PICKUP', {order});
+// }, 2500);
